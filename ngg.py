@@ -28,5 +28,9 @@ while True:
         break
     else:
         print("Wrong guess.!!")
-        
+        if user_guess < r_n:
+            print("You were below the number")
+        else:
+            print("You were above the number")
+
 print(f"You got it in {guesses} guesses")
