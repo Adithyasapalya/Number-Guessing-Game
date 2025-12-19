@@ -12,4 +12,19 @@ else:
     exit()
 
 
-r_n= random.randint(-5,11)
+r_n= random.randint(0, top_0f_range)
+
+while True:
+    
+    user_guess=input("Make a guess: ")
+    if user_guess.isdigit():
+        user_guess=int(user_guess)
+    else:
+        print("Please type a number next time.")
+        continue
+
+    if user_guess == r_n:
+        print("You got it right!!")
+    else:
+        print("Wrong guess.!!")
+    break
