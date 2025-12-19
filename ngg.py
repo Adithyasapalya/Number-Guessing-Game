@@ -13,9 +13,9 @@ else:
 
 
 r_n= random.randint(0, top_0f_range)
-
+guesses=0
 while True:
-    
+    guesses += 1
     user_guess=input("Make a guess: ")
     if user_guess.isdigit():
         user_guess=int(user_guess)
@@ -25,6 +25,8 @@ while True:
 
     if user_guess == r_n:
         print("You got it right!!")
+        break
     else:
         print("Wrong guess.!!")
-    break
+        
+print(f"You got it in {guesses} guesses")
